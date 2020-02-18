@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Weather from './components/Weather';
-import Date from './components/CurrentDate';
+import Weather from './components/Weather/Weather';
+import Date from './components/CurrentDate/CurrentDate';
 
 const openWeatherApiKey = 'c792484ade42380886f51003cfcaf04d';
 

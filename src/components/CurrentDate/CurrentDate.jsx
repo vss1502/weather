@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 let date = new Date();
 
 function getWeekDay(date) {
@@ -18,7 +19,9 @@ let year = date.getFullYear();
 
 const CurrentDate = () => {
 return(
-  <p>{day} {month} {dateNow} {year}</p>
+  <div className="currentDate">
+  <p >{day} {dateNow} {month} {year}</p>
+  </div>
 )
 }
 
