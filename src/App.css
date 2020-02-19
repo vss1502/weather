@@ -8,8 +8,7 @@
   color: #ffffff;
 }
 
-.currentDate p {
-  color: #ffffff;
+.currentDate {
   font-size: 50px;
   font-weight: bolder;
   margin: 0;
@@ -17,19 +16,17 @@
 }
 
 h1 {
-  color: #ffffff;
   font-size: 90px;
   margin: 0;
   padding: 0;
 }
 
 .temperature {
-padding: 0;
-margin: 0;
-font-weight: bold;
-font-size: 300px;
-text-transform: uppercase;
-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 300px;
+  text-transform: uppercase;
 }
 
 .results {
@@ -38,27 +35,18 @@ color: #ffffff;
   justify-content: center;
 }
 
-.item {
-  font-size: 24px;
+.details {
+  list-style: none;
   font-weight: bold;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
-.item div {
+.details li {
   padding-top: 20px;
+  font-size: 24px;
 }
 
-.item img {
+.details img {
   width: 200px;
   height: 200px;
 }
-
-
-
-
-
-
-
-
-
-

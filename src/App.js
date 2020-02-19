@@ -1,24 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Weather from './components/Weather/Weather';
-import Date from './components/CurrentDate/CurrentDate';
+import CurrentDate from './components/CurrentDate/CurrentDate';
 
 const openWeatherApiKey = 'c792484ade42380886f51003cfcaf04d';
 
-class App extends React.Component {
+class App extends Component {
   constructor(){
     super();
     this.state={
-      temp: undefined,
-      city: undefined,
-      sunset: undefined,
-      feels_like: undefined,
-      wind: undefined,
-      humidity: undefined,
-      precipitation: undefined,
-      icon: undefined
+      temp: null,
+      city: null,
+      sunset: null,
+      feels_like: null,
+      wind: null,
+      humidity: null,
+      precipitation: null,
+      icon: null
     };
-    this.getWeather();
+  }
+
+  componentDidMount() {
+   this.getWeather();
   }
 
   getWeather = async() => {
@@ -38,20 +41,22 @@ class App extends React.Component {
       icon: response.weather[0].icon
     });
   };
+  
+ 
 
   render(){
+    const {temp, city, feels_like, wind, humidity, precipitation, icon} = this.state;
     return(
       <div className="App">
-        <Date />
+        <CurrentDate />
         <Weather 
-          temp = {this.state.temp}
-          city = {this.state.city}
-          sunset = {this.state.sunset}
-          feels_like = {this.state.feels_like}
-          wind = {this.state.wind}
-          humidity = {this.state.humidity}
-          precipitation = {this.state.precipitation}
-          icon = {this.state.icon}
+        temp = {temp}
+        city = {city}
+        feels_like = {feels_like}
+        wind = {wind}
+        humidity = {humidity}
+        precipitation = {precipitation}
+        icon = {icon}
         />
       </div>
     )
