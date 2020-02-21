@@ -1,2 +1,2 @@
 # weather
-Демо: https://laughing-hugle-faa00f.netlify.com
+Демо: https://cocky-allen-5e9499.netlify.com/
