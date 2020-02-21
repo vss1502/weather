@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Weather from './components/Weather/Weather';
 import CurrentDate from './components/CurrentDate/CurrentDate';
+import Forecast from './components/Foracast/Forecast'
 
 const openWeatherApiKey = 'c792484ade42380886f51003cfcaf04d';
 
@@ -22,6 +23,7 @@ class App extends Component {
 
   componentDidMount() {
    this.getWeather();
+   //this.getForecast();
   }
 
   getWeather = async() => {
@@ -41,8 +43,6 @@ class App extends Component {
       icon: response.weather[0].icon
     });
   };
-  
- 
 
   render(){
     const {temp, city, feels_like, wind, humidity, precipitation, icon} = this.state;
@@ -58,6 +58,7 @@ class App extends Component {
         precipitation = {precipitation}
         icon = {icon}
         />
+        <Forecast />
       </div>
     )
   }
