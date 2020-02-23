@@ -12,7 +12,6 @@ class App extends Component {
     this.state={
       temp: null,
       city: null,
-      sunset: null,
       feels_like: null,
       wind: null,
       humidity: null,
